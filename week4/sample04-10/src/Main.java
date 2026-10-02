@@ -1,0 +1,27 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
+void main() {
+    Scanner keyboard = new Scanner(System.in);
+
+    int second;
+    int day;
+    int hour;
+    int minute;
+    int result;
+
+    System.out.print("원하는 시간을 초단위로 입력: ");
+    second = keyboard.nextInt();
+
+    minute = second / 60;
+    result = second % 60;
+
+    hour = minute / 60;
+    minute %= 60;
+
+    day = hour / 24;
+    hour %= 24;
+
+    System.out.printf("%d일 %d시간 %d분 %d초\n", day, hour, minute, result);
+}
